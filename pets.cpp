@@ -93,18 +93,22 @@ void view_owners(Pet* pet_array, int n)
 
     bool included = false;
 
-    for (int i = 0; i < n; i++) {
-        if (new_type == pet_array[i].pet_type) {
+    for (int i = 0; i < n; i++)
+    {
+        if (new_type == pet_array[i].pet_type)
+        {
             included = true;
             cout << endl << setw(20) << "Owner name" << setw(20) << "Pet type count" << endl;
-            while (new_type == pet_array[i].pet_type) {
+            while (new_type == pet_array[i].pet_type) 
+            {
                 cout << setw(20) << pet_array[i].owner_name << setw(10) << pet_array[i].pet_type << endl;
                 i++;
             }
         }
     }
 
-    if (!included) {
+    if (!included)
+    {
         cout << "Заданный вид животного не найден!\n";
     }
 
